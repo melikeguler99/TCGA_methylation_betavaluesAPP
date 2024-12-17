@@ -32,3 +32,9 @@ How to Use the App
 
 Launch the App:
 Run the following command in the terminal:
+Upload Data:
+In the app's interface, click the "Choose Files" button to select one or more .txt files that contain the methylation beta values. Ensure that the files are tab-separated (with a CpG site identifier in the first column and the beta value in the second).
+Generate Plots:
+After selecting your files, click the "Generate Plots" button. The app will display density plots for each file, with the beta values grouped and color-coded by methylation levels (UM, HM, M).
+Preview Data:
+The app will also display a preview of the first few rows of the data from the uploaded files for verification.
