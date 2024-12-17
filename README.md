@@ -43,7 +43,8 @@ Generate Plots:
 After selecting your files, click the "Generate Plots" button. The app will display density plots for each file, with the beta values grouped and color-coded by methylation levels (UM, HM, M).
 Preview Data:
 The app will also display a preview of the first few rows of the data from the uploaded files for verification.
-#File Format
+
+# File Format
 
 The input files should be in .txt format with two columns:
 
