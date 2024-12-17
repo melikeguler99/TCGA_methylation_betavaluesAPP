@@ -51,9 +51,8 @@ The input files should be in .txt format with two columns:
 CpG Site: Identifiers for the CpG sites.
 Beta Value: The methylation beta values.
 
-```bash
 Example format:
-
+```bash
 cg00000292  0.877321206559696
 cg00002426  0.963570230530168
 cg00003994  0.021860620895483
