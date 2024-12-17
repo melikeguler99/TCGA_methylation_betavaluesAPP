@@ -25,16 +25,43 @@ This application makes it easy to analyze and compare the methylation status of 
   - `matplotlib` (for plot customization)
 
 You can install the required libraries by running the following command:
-```bash
+
+```bash 
 pip install shiny pandas seaborn matplotlib
+```
 
 How to Use the App
 
 Launch the App:
 Run the following command in the terminal:
+```bash 
+shiny run app.py
+```
 Upload Data:
 In the app's interface, click the "Choose Files" button to select one or more .txt files that contain the methylation beta values. Ensure that the files are tab-separated (with a CpG site identifier in the first column and the beta value in the second).
 Generate Plots:
 After selecting your files, click the "Generate Plots" button. The app will display density plots for each file, with the beta values grouped and color-coded by methylation levels (UM, HM, M).
 Preview Data:
 The app will also display a preview of the first few rows of the data from the uploaded files for verification.
+File Format
+
+The input files should be in .txt format with two columns:
+
+CpG Site: Identifiers for the CpG sites.
+Beta Value: The methylation beta values.
+```bash
+Example format:
+
+cg00000292  0.877321206559696
+cg00002426  0.963570230530168
+cg00003994  0.021860620895483
+...
+
+```
+Customization
+
+You can customize the app according to your needs by modifying the following:
+
+Beta value thresholds for different methylation classifications.
+Color scheme for the methylation levels.
+Plotting styles using seaborn or matplotlib.
