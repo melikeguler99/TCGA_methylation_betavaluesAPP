@@ -35,7 +35,7 @@ How to Use the App
 Launch the App:
 Run the following command in the terminal:
 ```bash 
-shiny run app.py
+shiny run betApp.py
 ```
 Upload Data:
 In the app's interface, click the "Choose Files" button to select one or more .txt files that contain the methylation beta values. Ensure that the files are tab-separated (with a CpG site identifier in the first column and the beta value in the second).
@@ -49,6 +49,7 @@ The input files should be in .txt format with two columns:
 
 CpG Site: Identifiers for the CpG sites.
 Beta Value: The methylation beta values.
+
 ```bash
 Example format:
 
@@ -58,10 +59,3 @@ cg00003994  0.021860620895483
 ...
 
 ```
-Customization
-
-You can customize the app according to your needs by modifying the following:
-
-Beta value thresholds for different methylation classifications.
-Color scheme for the methylation levels.
-Plotting styles using seaborn or matplotlib.
