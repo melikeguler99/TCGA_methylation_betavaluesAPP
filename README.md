@@ -30,7 +30,7 @@ You can install the required libraries by running the following command:
 pip install shiny pandas seaborn matplotlib
 ```
 
-How to Use the App
+## How to Use the App
 
 Launch the App:
 Run the following command in the terminal:
