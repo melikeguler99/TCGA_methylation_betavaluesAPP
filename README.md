@@ -7,6 +7,8 @@ With this ShinyApp, you will be able to easily visualize your data, including be
 - **Hemimethylated (HM)**: β-value range of 0.2 to 0.8 (blue)
 - **Hypermethylated (M)**: β-value range of 0.8 to 1.0 (purple)
 
+Reference: Singhal SK, Usmani N, Michiels S, Metzger-Filho O, Saini KS, Kovalchuk O, Parliament M. Towards understanding the breast cancer epigenome: a comparison of genome-wide DNA methylation and gene expression data. Oncotarget. 2016 Jan 19;7(3):3002-17. doi: 10.18632/oncotarget.6503. PMID: 26657508; PMCID: PMC4823086.
+
 This application makes it easy to analyze and compare the methylation status of different samples or CpG sites in your datasets.
 
 ## Features
