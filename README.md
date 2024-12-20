@@ -19,10 +19,10 @@ This application makes it easy to analyze and compare the methylation status of 
 
 - **Python 3.x** (Preferably 3.7+)
 - **Required Libraries**:
-  - `shiny` (for the interactive web application)
-  - `pandas` (for data manipulation)
-  - `seaborn` (for generating density plots)
-  - `matplotlib` (for plot customization)
+  - `shiny` 
+  - `pandas` 
+  - `seaborn` 
+  - `matplotlib` 
 
 You can install the required libraries by running the following command:
 
