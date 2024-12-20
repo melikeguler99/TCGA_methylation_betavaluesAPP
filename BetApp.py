@@ -3,7 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# UI Tanımı
+# UI 
 app_ui = ui.page_fluid(
     ui.h2("DNA Methylation Beta Value Density Plot"),
     ui.layout_sidebar(
@@ -17,7 +17,7 @@ app_ui = ui.page_fluid(
     )
 )
 
-# Sunucu Fonksiyonu
+# Server
 def server(input, output, session):
     @output
     @render.plot
@@ -26,25 +26,21 @@ def server(input, output, session):
         if file_info is None:
             return
         
-        # Dosyayı okuma
+        # Read file
         file_contents = file_info[0]["datapath"]
         df = pd.read_csv(file_contents, sep="\t", header=None, names=["CpG_Site", "Beta_Value"])
         
         if input.remove_na():
             df = df.dropna()
-        
-        # Metilasyon seviyelerine göre veriyi bölme
         um_df = df[df["Beta_Value"] <= 0.2]  # Hypomethylated
         hm_df = df[(df["Beta_Value"] > 0.2) & (df["Beta_Value"] < 0.8)]  # Hemimethylated
         m_df = df[df["Beta_Value"] >= 0.8]  # Hypermethylated
         
-        # Yoğunluk grafiği oluşturma
         plt.figure(figsize=(10, 6))
         sns.kdeplot(um_df["Beta_Value"], color="green", label="Hypomethylated (UM)", fill=True, alpha=0.5)
         sns.kdeplot(hm_df["Beta_Value"], color="blue", label="Hemimethylated (HM)", fill=True, alpha=0.5)
         sns.kdeplot(m_df["Beta_Value"], color="purple", label="Hypermethylated (M)", fill=True, alpha=0.5)
         
-        # Grafik detayları
         plt.xlabel("Beta Values")
         plt.ylabel("Density")
         plt.title("DNA Methylation Levels - Density Plot")
@@ -63,14 +59,14 @@ def server(input, output, session):
         df = pd.read_csv(file_contents, sep="\t", header=None, names=["CpG_Site", "Beta_Value"])
         return df.head().to_string(index=False)
 
-# Uygulamayı başlat
+# Run the Shinyapp
 app = App(app_ui, server)
 from shiny import App, ui, render
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# UI Tanımı
+# UI Design
 app_ui = ui.page_fluid(
     ui.h2("DNA Methylation Beta Value Density Plot"),
     ui.layout_sidebar(
@@ -84,7 +80,7 @@ app_ui = ui.page_fluid(
     )
 )
 
-# Sunucu Fonksiyonu
+# Server
 def server(input, output, session):
     @output
     @render.plot
@@ -93,25 +89,23 @@ def server(input, output, session):
         if file_info is None:
             return
         
-        # Dosyayı okuma
+        # Read file
         file_contents = file_info[0]["datapath"]
         df = pd.read_csv(file_contents, sep="\t", header=None, names=["CpG_Site", "Beta_Value"])
         
         if input.remove_na():
             df = df.dropna()
         
-        # Metilasyon seviyelerine göre veriyi bölme
         um_df = df[df["Beta_Value"] <= 0.2]  # Hypomethylated
         hm_df = df[(df["Beta_Value"] > 0.2) & (df["Beta_Value"] < 0.8)]  # Hemimethylated
         m_df = df[df["Beta_Value"] >= 0.8]  # Hypermethylated
         
-        # Yoğunluk grafiği oluşturma
+
         plt.figure(figsize=(10, 6))
         sns.kdeplot(um_df["Beta_Value"], color="green", label="Hypomethylated (UM)", fill=True, alpha=0.5)
         sns.kdeplot(hm_df["Beta_Value"], color="blue", label="Hemimethylated (HM)", fill=True, alpha=0.5)
         sns.kdeplot(m_df["Beta_Value"], color="purple", label="Hypermethylated (M)", fill=True, alpha=0.5)
         
-        # Grafik detayları
         plt.xlabel("Beta Values")
         plt.ylabel("Density")
         plt.title("DNA Methylation Levels - Density Plot")
@@ -130,6 +124,6 @@ def server(input, output, session):
         df = pd.read_csv(file_contents, sep="\t", header=None, names=["CpG_Site", "Beta_Value"])
         return df.head().to_string(index=False)
 
-# Uygulamayı başlat
+# Start the app
 app = App(app_ui, server)
 
