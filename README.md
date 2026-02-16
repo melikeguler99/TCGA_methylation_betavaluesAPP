@@ -50,8 +50,9 @@ The app will also display a preview of the first few rows of the data from the u
 
 The input files should be in .txt format with two columns:
 
-CpG Site: Identifiers for the CpG sites.
-Beta Value: The methylation beta values.
+- CpG Site: Identifiers for the CpG sites.
+
+- Beta Value: The methylation beta values.
 
 Example format:
 ```bash
